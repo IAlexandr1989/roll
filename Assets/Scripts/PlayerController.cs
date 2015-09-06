@@ -34,8 +34,8 @@ namespace roll
 			levelText.text = "Level: " + level.ToString();
 		}
 		void FixedUpdate () {
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			float moveVertical = Input.GetAxis ("Vertical");
+			float moveHorizontal = Input.acceleration.x; // Input.GetAxis ("Horizontal");
+			float moveVertical = Input.acceleration.y; // Input.GetAxis ("Vertical");
 
 			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 			rb.AddForce (movement * speed);

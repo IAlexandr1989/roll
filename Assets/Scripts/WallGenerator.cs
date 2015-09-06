@@ -37,7 +37,7 @@ namespace roll
 				}
 				
 				previousTile = currentTile;
-				Transform endOffset = previousTile.Find ("End");
+				Transform endOffset = previousTile.Find ("Start");
 				Vector3 puPosition = new Vector3(endOffset.position.x, (float)(1.3), endOffset.position.z);
 				puClone = Instantiate(PickUp, puPosition, Quaternion.identity) as Transform;
 			}
